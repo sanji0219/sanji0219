@@ -1,22 +1,38 @@
-# こんにちは、私は内藤剛汰です! 🚀
+# konaito - アプリケーションエンジニア / 岩手大学 数理物理学部
 
-初めまして。プログラミングに情熱を注いで2.5年、岩手大学 理工学部 数理物理コースの学生として学びながら、数々の技術を探求してきました。大学合格発表日の翌日からはじめたHTMLやCSSの学びから始まり、今ではReact, Go, Flutterでの実務経験やPython, Unityでの自己探求を経て、フルスタック開発の道を歩んでいます。
+## 👋 はじめに
+初めまして、konaitoと申します。WebとNativeの両方でアプリケーション開発を行っているエンジニアです。現在、岩手大学で数理物理を学んでおり、プログラミングは大学入学を機に始めました。特に42Tokyoでの学びを通じ、深いコンピューターサイエンスの知識を身につけています。
 
-学生時代、私の学びの集大成として、自分の大学向けの[時間割アプリ](https://apps.apple.com/jp/app/%E3%81%8C%E3%82%93%E3%82%B3%E3%83%9E/id6446671825)を開発・リリースしました。これが私のフルスタック開発の旅の始まりでした。
+私の開発旅路は、大学生活の中で多岐にわたるプロジェクトに取り組むことから始まりました。これには、ハッカソンへの参加、Webアプリケーションのバイト、インターン、受託開発、そして個人プロジェクトが含まれます。
 
-現在の目標は、フルスタックエンジニアとしての更なるスキルアップです。日々新しい技術を学び、挑戦を続けています。
+## 🛠 スキル
+- フロントエンド: `HTML`, `CSS`, `JavaScript`, `TypeScript`, `React`, `Next.js`, `Vue.js`
+- バックエンド: `Python`, `C`, `Go`, `Rust`, `Flask`, `fastAPI`
+- ブロックチェーン: `Solidity`
+- モバイル開発: `Flutter`
+- ゲーム開発: `Unity`
+- データベース・バックエンド: `Firebase`, `Supabase`
 
-**技術スタック**:
-- 実務経験: 
-![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white)
-![Go](https://img.shields.io/badge/-Go-00ADD8?logo=go&logoColor=white)
-![Flutter](https://img.shields.io/badge/-Flutter-02569B?logo=flutter&logoColor=white)
-- 自己探求: 
-![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)
-![Unity](https://img.shields.io/badge/-Unity-000000?logo=unity&logoColor=white)
+## 📜 経歴
+- **2023.9**: 42Tokyo 入学
+- **2023.8**: 株式会社DONUTS インターン
+- **2022.11**: 株式会社MOSHIMOS アルバイト
+- **2021.4**: 岩手大学 入学
+- **2020.3**: 川崎市立川崎高等学校 卒業
 
-最推しのポートフォリオとして、家計簿アプリの[リポジトリ](https://github.com/sanji0219/kakebo)を紹介します。こちらは、2023年9月から42TokyoでCSを勉強するにあたって独学最後の制作物として制作しました。是非、ご覧ください。
+## 🚀 プロジェクト
+私がこれまでに取り組んできたプロジェクトの一部を紹介します。プロジェクトの全容については、[こちらのポートフォリオサイト](#)をご覧ください。
+- **がんコマ**: 岩手大学向けの時間割アプリ
+- **zk-geo**: ゼロ知識証明を利用したプライバシー保護型地点証明システム
+- **Enn-Drive**: ブロックチェーンを使用した車両間評価システム
+- **Calen & CopyCal**: 効率的なスケジュール管理を実現するカレンダーアプリ
 
-もっと私のことを知りたい方は、[こちらのポートフォリオサイト](https://withuto.web.app)をご覧ください。*(現在、PC版のみ対応しています)*
+## 📱 SNS & 連絡先
+- Twitter: [@konaito0219](https://twitter.com/konaito0219)
+- Instagram: [@kota_fyb](https://www.instagram.com/kota_fyb/)
+- Facebook: [Profile](https://www.facebook.com/profile.php?id=100078669887929)
+- Email: [withuto@gmail.com](mailto:withuto@gmail.com)
 
-どうぞよろしくお願いします。
+---
+
+私の経歴やプロジェクトに興味を持っていただけた方は、ぜひ[ポートフォリオサイト](#)もご覧ください。さらに詳しい情報や、私との連絡方法についてはそちらをご参照ください。
