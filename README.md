@@ -6,8 +6,8 @@
 私の開発旅路は、大学生活の中で多岐にわたるプロジェクトに取り組むことから始まりました。これには、ハッカソンへの参加、Webアプリケーションのバイト、インターン、受託開発、そして個人プロジェクトが含まれます。
 
 ## 🛠 スキル
-- フロントエンド: `HTML`, `CSS`, `JavaScript`, `TypeScript`, `React`, `Next.js`, `Vue.js`
-- バックエンド: `Python`, `C`, `Go`, `Rust`, `Flask`, `fastAPI`
+- フロントエンド: `HTML`, `CSS`, `JavaScript`, `TypeScript`, `React`, `Next.js`
+- バックエンド: `Python`, `C`, `Go`, `Rust`
 - ブロックチェーン: `Solidity`
 - モバイル開発: `Flutter`
 - ゲーム開発: `Unity`
