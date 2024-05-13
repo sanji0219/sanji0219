@@ -29,7 +29,7 @@
 
 ## 📱 SNS & 連絡先
 - Twitter: [@konaito0219](https://twitter.com/konaito0219)
-- Instagram: [@kota_fyb](https://www.instagram.com/kota_fyb/)
+- Instagram: [@kota_fyb](https://www.instagram.com/konaito_/)
 - Facebook: [Profile](https://www.facebook.com/profile.php?id=100078669887929)
 - Email: [withuto@gmail.com](mailto:withuto@gmail.com)
 
