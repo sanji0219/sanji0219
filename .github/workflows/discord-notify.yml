@@ -13,7 +13,7 @@ jobs:
       - name: Send Discord Notification on Push
         if: github.event_name == 'push'
         run: |
-          curl -X POST "${{ secrets.e }}" \
+          curl -X POST "${{ secrets.DISCORD_WEBHOOK_URL }}" \
             -H "Content-Type: application/json" \
             -d "$(jq -n --arg code "${{ secrets.DISCORD_WEBHOOK_CODE }}" \
                          --arg actor "${{ github.actor }}" \
