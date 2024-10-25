@@ -1,0 +1,19 @@
+name: Test Discord Webhook Secrets
+
+on:
+  workflow_dispatch:  # 手動実行でテストできるように設定
+
+jobs:
+  test-secrets:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Echo Discord Webhook URL and Code
+        run: |
+          if [ -z "${{ secrets.DISCORD_WEBHOOK_URL }}" ] || [ -z "${{ secrets.DISCORD_WEBHOOK_CODE }}" ]; then
+            echo "Error: One or both secrets are missing."
+            exit 1
+          else
+            echo "DISCORD_WEBHOOK_URL: '${{ secrets.DISCORD_WEBHOOK_URL }}'"
+            echo "DISCORD_WEBHOOK_CODE: '${{ secrets.DISCORD_WEBHOOK_CODE }}'"
+          fi
