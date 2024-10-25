@@ -1,0 +1,49 @@
+name: Discord Notification
+
+on:
+  push:
+  pull_request:
+    types: [opened, closed]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send Discord Notification on Push
+        if: github.event_name == 'push'
+        run: |
+          curl -X POST "${{ secrets.e }}" \
+            -H "Content-Type: application/json" \
+            -d "$(jq -n --arg code "${{ secrets.DISCORD_WEBHOOK_CODE }}" \
+                         --arg actor "${{ github.actor }}" \
+                         --arg ref "${{ github.ref }}" \
+                         --arg repo "${{ github.repository }}" \
+                  '{code: $code, message: "🛠 Push: \($actor) が push しました\n\tbranch: \($ref)\n\tlink: https://github.com/\($repo)/tree/\($ref)"}')"
+
+      - name: Send Discord Notification on PR Opened
+        if: github.event_name == 'pull_request' && github.event.action == 'opened'
+        run: |
+          body="${{ github.event.pull_request.body }}"
+          if [ -z "$body" ]; then
+            body="No description provided."
+          fi
+          curl -X POST "${{ secrets.DISCORD_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d "$(jq -n --arg code "${{ secrets.DISCORD_WEBHOOK_CODE }}" \
+                         --arg actor "${{ github.actor }}" \
+                         --arg title "${{ github.event.pull_request.title }}" \
+                         --arg body "$body" \
+                         --arg url "${{ github.event.pull_request.html_url }}" \
+                  '{code: $code, message: "📋 New PR: \($actor) により PR が作成されました\n\ttitle: \($title)\n\tbody: \($body)\n\tlink: \($url)"}')"
+
+      - name: Send Discord Notification on PR Merged
+        if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
+        run: |
+          curl -X POST "${{ secrets.DISCORD_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d "$(jq -n --arg code "${{ secrets.DISCORD_WEBHOOK_CODE }}" \
+                         --arg actor "${{ github.actor }}" \
+                         --arg title "${{ github.event.pull_request.title }}" \
+                         --arg url "${{ github.event.pull_request.html_url }}" \
+                  '{code: $code, message: "📋 PR Merged: \($actor) により PR がマージされました\n\ttitle: \($title)\n\tlink: \($url)"}')"
