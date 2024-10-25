@@ -10,10 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Debug Webhook URL
-        run: |
-          echo "Webhook URL Last 3 Characters: ${${{ secrets.DISCORD_WEBHOOK_URL }}: -3}"
-
       - name: Send Discord Notification on Push
         if: github.event_name == 'push'
         run: |
