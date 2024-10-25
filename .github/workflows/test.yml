@@ -1,26 +1,19 @@
-name: Test Discord Webhook Notification
+name: Test Discord Webhook Secrets
 
 on:
-  workflow_dispatch:  # 手動で実行できるように設定
+  workflow_dispatch:  # 手動実行でテストできるように設定
 
 jobs:
-  test-notification:
+  test-secrets:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check and Send Test Notification
-        env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          DISCORD_WEBHOOK_CODE: ${{ secrets.DISCORD_WEBHOOK_CODE }}
+      - name: Echo Discord Webhook URL and Code
         run: |
-          if [ -z "$DISCORD_WEBHOOK_URL" ] || [ -z "$DISCORD_WEBHOOK_CODE" ]; then
+          if [ -z "${{ secrets.DISCORD_WEBHOOK_URL }}" ] || [ -z "${{ secrets.DISCORD_WEBHOOK_CODE }}" ]; then
             echo "Error: One or both secrets are missing."
             exit 1
+          else
+            echo "DISCORD_WEBHOOK_URL: '${{ secrets.DISCORD_WEBHOOK_URL }}'"
+            echo "DISCORD_WEBHOOK_CODE: '${{ secrets.DISCORD_WEBHOOK_CODE }}'"
           fi
-
-          echo "Sending test notification to $DISCORD_WEBHOOK_URL"
-          
-          curl -X POST "$DISCORD_WEBHOOK_URL" \
-            -H "Content-Type: application/json" \
-            -d "$(jq -n --arg code "$DISCORD_WEBHOOK_CODE" \
-                         '{code: $code, message: "🚀 Test notification from GitHub Actions."}')"
